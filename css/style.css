@@ -1,0 +1,52 @@
+/* Temel HTML ve Body ayarları */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Kaydırmayı kaldırır */
+}
+
+/* Videoyu tam ekran yapar ve kutuya sığdırır */
+video {
+  position: fixed; /* Sabit konumlandırma ile tam ekran yapılır */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Viewport genişliği */
+  height: 100vh; /* Viewport yüksekliği */
+  object-fit: cover; /* Videoyu kutunun boyutlarına sığdırır */
+}
+
+/* Düğmeleri ekranın üst kısmında ortalar */
+#buttons {
+  position: fixed; /* Sabit konumlandırma */
+  top: 20px; /* Üstten boşluk */
+  left: 50%; /* Yatay olarak ortalar */
+  transform: translateX(-50%); /* Tam ortalanmasını sağlar */
+  z-index: 1000; /* Video üzerinde gözükecek şekilde z-index ayarlanır */
+}
+#buttons button {
+  background-color: red; /* Butonların arka plan rengi */
+  color: white; /* Butonlardaki yazı rengi */
+  font-weight: bold; /* Yazı tipini kalın yapar */
+  font-size: 20px; /* Yazı boyutunu büyütür */
+  padding: 15px 30px; /* Buton iç boşluğunu ayarlar */
+  border: none; /* Kenarlık kaldırılır */
+  border-radius: 5px; /* Kenarları yuvarlak yapar */
+  cursor: pointer; /* Fare imlecini el simgesine dönüştürür */
+  margin: 10px; /* Butonlar arası boşluk */
+}
+
+#buttons button:hover {
+  background-color: darkred; /* Fare butonun üzerine geldiğinde rengi koyulaştırır */
+}
+
+/* İçerik resmini ekranın ortasında konumlandırır */
+#content img {
+  position: fixed; /* Sabit konumlandırma */
+  top: 50%; /* Dikey olarak ortalar */
+  left: 50%; /* Yatay olarak ortalar */
+  transform: translate(-50%, -50%); /* Tam ortalanmasını sağlar */
+  z-index: 1001; /* Düğmelerin üzerinde gözükecek şekilde z-index ayarlanır */
+}
